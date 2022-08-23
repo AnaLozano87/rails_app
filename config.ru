@@ -8,9 +8,11 @@ run Rails.application
 Rails.application.load_server
 
 Rails.application.routes.draw do
-  root  'page#home'
+  root  "pages#home"
   get "/articles", to: "articles#index"
   #root "articles#index"
+  get "/home", to: "pages#home"
   get "/about", to: "pages#about"
+  get "/contact", to: "pages#contact"
 
 end
